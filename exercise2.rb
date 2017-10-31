@@ -37,4 +37,7 @@ elsif
   my_recommendation = "#{approvals.zip(recommendation).max}"
   answer = my_recommendation.split(',',2).last
   puts "My recommendation is #{answer}"
+# else
+#   puts "I recommend #{my_book}"
+
 end

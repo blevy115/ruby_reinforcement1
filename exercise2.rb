@@ -32,12 +32,16 @@ elsif
   puts "I recommend #{my_drama}"
 elsif
   documentary_app <=3 && drama_app <=3 && comedy_app <=3
-  approvals = [documentary_app, drama_app, comedy_app]
-  recommendation = [my_documentary, my_drama, my_comedy]
-  my_recommendation = "#{approvals.zip(recommendation).max}"
-  answer = my_recommendation.split(',',2).last
-  puts "My recommendation is #{answer}"
-# else
-#   puts "I recommend #{my_book}"
-
+  if
+    documentary_app > drama_app && comedy_app
+    puts "I recommend #{my_documentary}"
+  elsif
+    comedy_app > drama_app && documentary_app
+    puts "I recommend #{my_comedy}"
+  elsif
+    drama_app > comedy_app && documentary_app
+    puts "I recommend #{my_drama}"
+  else
+    puts "I recommend #{my_book}"
+  end
 end
